@@ -48,7 +48,6 @@ function App() {
         .withAgeAndGender()
         ;
       const resizedDetections = faceApi.resizeResults(detections, displaySize);
-      console.log(resizedDetections)
       canvasRef.current.getContext("2d").clearRect(0, 0, videoWidth, videoWidth);
       faceApi.draw.drawDetections(canvasRef.current, resizedDetections)
       faceApi.draw.drawFaceLandmarks(canvasRef.current, resizedDetections)
